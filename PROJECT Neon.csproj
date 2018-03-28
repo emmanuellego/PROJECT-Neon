@@ -283,10 +283,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BillboardToCamera.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Follow.cs" />
+    <Compile Include="Assets\Scripts\GenericClass.cs" />
+    <Compile Include="Assets\Scripts\IcarusClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Asset Store\Simple city plain\Read_me.txt" />
+    <None Include="Assets\Asset Store\SkySerie Freebie\Hdri setup.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
