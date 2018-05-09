@@ -4,36 +4,45 @@ using UnityEngine;
 
 public class IcarusClass : GenericClass {
 
+    public GameObject projectileSpawn, projectile;
+
+    private bool isEnemy = false;
+    private GameObject enemy;
+
     public IcarusClass()
     {
-        atk = 10;
-        def = 5;
-        spd = 12.0f;
+        attacks = new string[2];
+        attacks[0] = "Stab";
+        attacks[1] = "Knife Throw";
     }
 
-    private void Update()
-    {
-        Movement();
-        MeleeAttack();
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            print("I pressed Z!");
-            MeleeAttack();
+    public override void AttackOne() {
+        if (ener >= 4) {
+            isAttacking = true;
+            anim.Play("MELEE02", -1, 0f);
+            if (isEnemy)
+                enemy.GetComponent<GenericClass>().TakeDamage(2 * atk);
+            ReduceEnergy(4);
+            isAttacking = false;
         }
     }
 
-    private void MeleeAttack()
-    {
-        GameObject enemyObj = GameObject.FindGameObjectWithTag("Enemy");
-        GenericClass enemy = enemyObj.GetComponent<GenericClass>();
-        float dist, maxDist = 2.0f;
-
-        dist = Vector3.Distance(transform.position, enemyObj.transform.position);
-        if (dist < maxDist)
-        {
-            print("Enemy in my sight!");
+    public override void AttackTwo() {
+        if (ener >= 6) {
+            isAttacking = true;
             anim.Play("MELEE01", -1, 0f);
-            enemy.TakeDamage(atk);
+            GameObject tempProj = Instantiate(projectile, projectileSpawn.transform);
+            Destroy(tempProj, 2.5f);
+            ReduceEnergy(6);
+            isAttacking = false;
+        } 
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.transform.parent.gameObject.tag == "Enemy") {
+            Debug.Log("Enemy found!");
+            enemy = other.transform.parent.gameObject;
+            isEnemy = true;
         }
     }
 }

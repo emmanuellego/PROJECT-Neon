@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[ExecuteInEditMode]
 
-// Script used: https://gist.github.com/Hamcha/6096905
+// Script base used: https://gist.github.com/Hamcha/6096905
 public class Follow : MonoBehaviour {
 
     // The target we are following
@@ -11,7 +12,7 @@ public class Follow : MonoBehaviour {
     public float distance = 10.0f;
     // the height we want the camera to be above the target
     public float height = 5.0f;
-    // How much we 
+    // How much we dampen the camera
     public float heightDamping = 2.0f;
     public float rotationDamping = 3.0f;
 
@@ -49,5 +50,13 @@ public class Follow : MonoBehaviour {
 
         // Always look at the target
         transform.LookAt(target);
+    }
+
+    public void SetTarget (Transform target) {
+        this.target = target;
+    }
+
+    public Transform GetTarget() {
+        return target;
     }
 }

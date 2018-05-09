@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: edb65ad95288c1b429ececfaf89b6843
+  - enabled: 1
+    path: Assets/Scenes/Combat Phase.unity
+    guid: b2f8c4f880f4de643b98eba2d4601efb
