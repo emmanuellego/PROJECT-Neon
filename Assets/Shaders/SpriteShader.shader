@@ -1,6 +1,4 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
-Shader "2D/SpriteShader"
+﻿Shader "2D/SpriteShader"
  {  
      Properties
      {

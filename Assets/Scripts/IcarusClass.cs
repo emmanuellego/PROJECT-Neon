@@ -8,12 +8,17 @@ public class IcarusClass : GenericClass {
 
     private bool isEnemy = false;
     private GameObject enemy;
+    private AudioSource aud;
 
     public IcarusClass()
     {
         attacks = new string[2];
         attacks[0] = "Stab";
         attacks[1] = "Knife Throw";
+    }
+
+    private void Awake() {
+        aud = GetComponentInChildren<AudioSource>();
     }
 
     public override void AttackOne() {
@@ -31,6 +36,7 @@ public class IcarusClass : GenericClass {
         if (ener >= 6) {
             isAttacking = true;
             anim.Play("MELEE01", -1, 0f);
+            aud.Play();
             GameObject tempProj = Instantiate(projectile, projectileSpawn.transform);
             Destroy(tempProj, 2.5f);
             ReduceEnergy(6);

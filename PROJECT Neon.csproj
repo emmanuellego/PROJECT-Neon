@@ -282,6 +282,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Asset Store\CyberPunk\Scripts\Done_BGScroller.cs" />
+    <Compile Include="Assets\Asset Store\CyberPunk\Scripts\Perspective2DSortMode.cs" />
     <Compile Include="Assets\Asset Store\CyberPunk_Blonde\Demo\Necessary for Demo Scene\Input_Controller.cs" />
     <Compile Include="Assets\Asset Store\CyberPunk_Blonde\Documentation\Readme.txt.cs" />
     <Compile Include="Assets\Asset Store\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
@@ -335,10 +337,11 @@
     <Compile Include="Assets\Asset Store\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
     <Compile Include="Assets\Asset Store\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\Asset Store\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
-    <Compile Include="Assets\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\Attack.cs" />
     <Compile Include="Assets\Scripts\BillboardToCamera.cs" />
+    <Compile Include="Assets\Scripts\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\ChangeAttack.cs" />
+    <Compile Include="Assets\Scripts\Exit.cs" />
     <Compile Include="Assets\Scripts\Follow.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\GenericClass.cs" />
@@ -394,6 +397,7 @@
     <None Include="Assets\Asset Store\SkySerie Freebie\Hdri setup.txt" />
     <None Include="Assets\Audio\Voice Lines\Credits.txt" />
     <None Include="Assets\Audio\Voice Lines\License.txt" />
+    <None Include="Assets\Shaders\SolidColor.shader" />
     <None Include="Assets\Shaders\SpriteShader.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

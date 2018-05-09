@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Combat Phase.unity
     guid: b2f8c4f880f4de643b98eba2d4601efb
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 5b12f8f0794ff58429adb7202ceb8280

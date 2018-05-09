@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -55,6 +56,10 @@ public class GameController : MonoBehaviour {
             Time.timeScale = 1;
             isPaused = false;
         }
+    }
+
+    public void RunScene(string scene) {
+        SceneManager.LoadScene(scene);
     }
 
 }

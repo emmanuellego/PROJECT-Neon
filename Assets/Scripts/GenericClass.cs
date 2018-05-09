@@ -20,7 +20,8 @@ public abstract class GenericClass : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        Movement();
+        if (!isAttacking)
+            Movement();
     }
 
     public void TakeDamage(int amt)
@@ -68,7 +69,7 @@ public abstract class GenericClass : MonoBehaviour {
         anim.SetFloat("inputV", 0.0f);
     }
 
-    public void Death() {
+    public virtual void Death() {
         anim.Play("DEATH", -1, 0f);
         Destroy(gameObject, 0.5f);
     }

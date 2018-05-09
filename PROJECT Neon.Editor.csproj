@@ -369,6 +369,7 @@
     <None Include="Assets\Asset Store\SkySerie Freebie\Hdri setup.txt" />
     <None Include="Assets\Audio\Voice Lines\Credits.txt" />
     <None Include="Assets\Audio\Voice Lines\License.txt" />
+    <None Include="Assets\Shaders\SolidColor.shader" />
     <None Include="Assets\Shaders\SpriteShader.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

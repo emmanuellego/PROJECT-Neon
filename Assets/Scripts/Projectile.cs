@@ -5,6 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour {
 
     public float spd = 5;
+    public int dmg = 2;
 
     private GameObject enemy;
 
@@ -21,8 +22,9 @@ public class Projectile : MonoBehaviour {
             Debug.Log("Enemy found!");
             enemy = other.transform.parent.gameObject;
             int dex = gameObject.transform.parent.parent.gameObject.GetComponent<GenericClass>().GetDex();
-            enemy.GetComponent<GenericClass>().TakeDamage(2 * dex);
+            enemy.GetComponent<GenericClass>().TakeDamage(dmg * dex);
             Destroy(gameObject);
         }
     }
+
 }
