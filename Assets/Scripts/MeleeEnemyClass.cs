@@ -10,9 +10,14 @@ public class MeleeEnemyClass : GenericClass {
     }
 
     public override void Death() {
+        Invoke("DelayedMethod", 1.0f);
         anim.Play("DEATH", -1, 0f);
-        Destroy(gameObject, 0.5f);
+    }
+
+    void DelayedMethod() {
+        Debug.Log("Awesome!");
         SceneManager.LoadScene("Scenes/Credits");
+        Destroy(gameObject, 0.5f);
     }
 
     public override void AttackOne() {
